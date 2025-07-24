@@ -1,0 +1,150 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #000;
+  --card-color: #fff;
+  --border-color: #ddd;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --card-color: #1e1e1e;
+  --border-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-color);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar input {
+  width: 40%;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+}
+
+.topbar h1 {
+  color: red;
+  font-size: 24px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: var(--card-color);
+  border-right: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.sidebar a:hover {
+  background: #44444444;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: var(--card-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.video-thumb {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.video-info {
+  padding: 10px;
+}
+
+.video-info h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.video-info p {
+  font-size: 13px;
+  color: gray;
+}
+
+#uploadForm {
+  margin-top: 20px;
+  background: var(--card-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+#uploadForm input {
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+}
+
+#uploadForm button,
+#darkToggle {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: crimson;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#darkToggle {
+  margin-left: 10px;
+  background: #333;
+}
