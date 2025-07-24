@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Clone with Firebase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <h1>YouTube</h1>
+    <input type="text" placeholder="Search..." id="searchBar" />
+    <button id="darkToggle">Toggle Dark Mode</button>
+  </div>
+
+  <div class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Trending</a>
+    <a href="#">Subscriptions</a>
+    <a href="#">Library</a>
+  </div>
+
+  <div class="content">
+    <div class="videos" id="videoList"></div>
+
+    <form id="uploadForm">
+      <h3>Upload New Video</h3>
+      <input type="text" id="videoTitle" placeholder="Video Title" required />
+      <input type="file" id="videoFile" accept="video/*" required />
+      <input type="file" id="thumbnailFile" accept="image/*" required />
+      <input type="text" id="videoChannel" placeholder="Channel Name" required />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
