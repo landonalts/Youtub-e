@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LanTube</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>LanTube</h1>
+    <button id="darkModeToggle">🌓</button>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <a href="#" data-tab="home">Home</a>
+      <a href="#" data-tab="trending">Trending</a>
+      <a href="#" data-tab="subscriptions">Subscriptions</a>
+      <a href="#" data-tab="library">Library</a>
+    </aside>
+
+    <main class="content">
+      <div id="mainView"></div>
+
+      <form id="uploadForm">
+        <input type="file" id="videoFile" accept="video/*" required />
+        <input type="text" id="videoTitle" placeholder="Enter video title" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      <div id="videoList"></div>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
