@@ -1,55 +1,77 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #fff;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
   color: #000;
-  transition: background 0.3s, color 0.3s;
 }
 
 .dark-mode {
-  background: #181818;
+  background: #111;
   color: #fff;
 }
 
 header {
-  background: #cc0000;
-  color: white;
-  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
+  background: #202020;
+  color: white;
 }
 
-.container {
-  display: flex;
+nav button {
+  margin-right: 10px;
+  padding: 10px;
+  background: #303030;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.sidebar {
-  width: 200px;
-  background: #f2f2f2;
-  padding: 1em;
-  height: 100vh;
+nav button:hover {
+  background: #444;
 }
 
-.sidebar a {
-  display: block;
-  margin-bottom: 1em;
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
+main {
+  padding: 20px;
 }
 
-.content {
-  flex: 1;
-  padding: 1em;
+.video-item {
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
 }
 
-#uploadForm {
-  margin: 1em 0;
+.dark-mode .video-item {
+  background: #222;
 }
 
-video {
+.video-item video {
   max-width: 100%;
   display: block;
-  margin: 1em 0;
+  margin-bottom: 10px;
+}
+
+.comment-section {
+  margin-top: 10px;
+}
+
+.comment-section input {
+  width: 70%;
+  padding: 6px;
+}
+
+.comment-section button {
+  padding: 6px;
+  margin-left: 5px;
+}
+
+#uploadSection {
+  display: none;
+}
+
+button {
+  margin: 5px 0;
 }
