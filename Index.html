@@ -4,34 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LanTube</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>LanTube</h1>
-    <button id="darkModeToggle">🌓</button>
+    <nav>
+      <button id="homeTab">🏠 Home</button>
+      <button id="uploadTab">⬆️ Upload</button>
+      <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+    </nav>
   </header>
 
-  <div class="container">
-    <aside class="sidebar">
-      <a href="#" data-tab="home">Home</a>
-      <a href="#" data-tab="trending">Trending</a>
-      <a href="#" data-tab="subscriptions">Subscriptions</a>
-      <a href="#" data-tab="library">Library</a>
-    </aside>
+  <main>
+    <div>
+      <input type="text" id="searchInput" placeholder="Search videos...">
+    </div>
 
-    <main class="content">
-      <div id="mainView"></div>
+    <section id="homeSection">
+      <div id="videoContainer"></div>
+    </section>
 
+    <section id="uploadSection">
       <form id="uploadForm">
-        <input type="file" id="videoFile" accept="video/*" required />
-        <input type="text" id="videoTitle" placeholder="Enter video title" required />
-        <button type="submit">Upload</button>
+        <input type="text" id="videoTitle" placeholder="Video title" required>
+        <input type="file" id="videoFile" accept="video/*" required>
+        <button type="submit">Upload Video</button>
       </form>
-
-      <div id="videoList"></div>
-    </main>
-  </div>
+    </section>
+  </main>
 
   <script type="module" src="script.js"></script>
 </body>
